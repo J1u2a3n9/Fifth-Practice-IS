@@ -55,6 +55,10 @@ Visual explanation of alpha-beta prunning
   <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Animation_of_alpha-beta_pruning.gif" alt="Sublime's custom image"/>
 </p>
 
+## DESCRIPTION OF HEURISTICS
+The heuristic method of class Board assigns a value to a given board state based on the number of Xs and Os on the board in addition to the existing lines of Xs and Os that might indicate one player is closer to winning than another. Exact values are a result of trial-and-error. Heuristic values for each state are stored in additional cache in so that they needn't be calculated again.
+
+
 
 ## PROBLEM SOLVER AGENT ⚙️
 
@@ -259,12 +263,20 @@ The evaluation of the agent with only min max was not taken into account due to 
 
 
 ## CONCLUSION
-*
+* The experiments carried out on the program and the execution of competitions between its agents show us that in terms of time the best execution is the Min Max Alpha Beta algorithm, likewise the worst performance is the Min Max that reaches five seconds, graphically it can be seen that if you start with the Min Max algorithm the execution time rises out of the normal due to the expansion of all possible states, Theoretically the cut off algorithm is more optimal than alpha and beta but in our implementation due to all the processes behind it the use of Zobrist Hashing could slow down the total execution time. 
+
+* The number of expanded states is fundamental for the good performance of a program in the table of comparisons of expanded states of the intelligent agents competition it is shown that the one that expands less states is the execution of the program with the Min Max Cutt of algorithm which is correct due to its heuristic that restricts and makes it possible to avoid visiting certain states while the worst result gives the min Max due to its excessive expansion of the game tree.
+
+* Due to its poor performance in terms of time and number of expanded states we could think that the min Max algorithm is not efficient for use in the tic tac toe game but this is not a definitive conclusion that it works for all implementation situations while the modifications of the min Max are of great help these can vary greatly according to which heuristic will be used and for which situation it will be implemented. 
+
+
 
 
 
 ## BIBLIOGRAPHY
 * Class slides
 * https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-5-zobrist-hashing/
+* https://github.com/SliMM
+* 
 
 
