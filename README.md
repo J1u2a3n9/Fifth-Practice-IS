@@ -11,6 +11,44 @@
 * La Fuente Mercedes
 
 ### IMPORTANT! HOW TO USE :hammer:
+* Clone from the main repository using: 
+
+     -git clone (repository link)
+* For the correct functioning of the code you first need to install numpy and matplotlib from the console with the following command:                   
+
+     -pip install numpy
+
+* Insert in the console terminal 'python main.py' to start the program
+
+* The program at startup shows you the available agents with which you can start the game. 
+
+* You must select two players
+
+* The program will ask you for a board size which you have to enter taking into account that it must be greater or equal to 3
+ 
+* The first player to be defined automatically will be set as X who will be the first to start the game and the second player as O.
+
+* When it is your turn the program will ask you to enter a position which is defined by column and row (it is allowed to add as columns lowercase and uppercase letters that are within the range).
+
+* When the program finishes it will show the result of the game and who won, it will also show the execution time that each agent had to make the decision and finally it will show the number of nodes expanded with each agent that is not human. 
+
+* You will be allowed to play again and points will be added automatically in case you play more than one game. 
+
+
+## Minimax algorithm
+
+Minimax algorithm calculate the minimax decision at a current state and try to find the optimal move for a player, assuming that your opponent also plays optimally.
+It use a backtracking-like method, doing a simple recursive call developping all leaf of the tree, pushing up these values level by level. Minimax explore (DFS Depth First Search) the tree.
+
+Here is a visual exemple of how minimax works
+![minimax](https://github.com/aureliensimon/zer0lose/blob/master/img/ZXEdz.png)
+
+
+## Alpha Beta prunning
+1956, John McCarthy is presiding Dartmouth's conference, in which he presents alpha-beta prunning, that seeks to decrease the number of nodes that are evaluated by the minimax algorithm in its search tree. It stops evaluating a move when at least one possibility has been found that proves the move to be worse than a previously examined move. Such moves need not be evaluated further. When applied to a standard minimax tree, it returns the same move as minimax would, but prunes away branches that cannot possibly influence the final decision.
+
+Visual explanation of alpha-beta prunning
+![abprunning](https://github.com/aureliensimon/zer0lose/blob/master/img/abprunning.png)
 
 
 ## PROBLEM SOLVER AGENT ⚙️
@@ -43,6 +81,10 @@ and MinMaxCutOff
 
 ## SOLUTION DESCRIPTION
 The program allows to generate a board of dimensions n * n that are greater or equal to three, it also allows to choose if the first player will be human or the same program which has implemented the requested algorithms, the first player is always x whether it is the computer or human and also the program always looks for the best solution so that it wins or draws against its opponent.
+
+The program uses several confrotation algorithms such as Min Max, Min max alpha betta prunning and Min max cutt off but additionally uses the existing heuristics of Zobrist Hashing which is a hash function that is widely used in 2-player board games. It is the most common hash function used in transposition table. Transposition tables basically store the evaluated values of previous board states, so that if they are encountered again, we simply retrieve the stored value from the transposition table. We will cover transpose tables in a later article. 
+
+
 
 
 ## EXPERIMENTS :round_pushpin:
@@ -204,5 +246,6 @@ Each experiment performed was done in an environment in which the two agents are
 
 ## BIBLIOGRAPHY
 * Class slides
+* https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-5-zobrist-hashing/
 
 
