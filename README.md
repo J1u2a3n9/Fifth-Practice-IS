@@ -34,6 +34,8 @@
 
 * You will be allowed to play again and points will be added automatically in case you play more than one game. 
 
+* The program generates a txt file in which it shows the times in which each action is executed regardless of whether it is from the program or a human.
+
 
 ## MIN MAX ALGORITHM
 
