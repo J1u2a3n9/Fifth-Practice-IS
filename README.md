@@ -10,6 +10,10 @@
 * Canedo Juan Luis
 * La Fuente Mercedes
 
+### DISCLAIMER
+As a matter of time and security of the group, the work was done continuously and incrementally through a visual studio share in meetings that were scheduled according to the availability of each one, the continuous commit was not taken into account because we always worked as a group and we were not able to push, because everything was done in a single shared machine. 
+Previously the separate work was taken into account but due to lack of coordination.  
+
 ### IMPORTANT! HOW TO USE :hammer:
 * Clone from the main repository using: 
 
