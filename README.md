@@ -2,7 +2,7 @@
 # TIC TAC TOE
 
 <p align="center">
-  <img src="https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photo/10447262/image/b99e85ef89ddf17c87ad356f4727aaa0" alt="Sublime's custom image"/>
+  <img src="https://alfonsopinel.files.wordpress.com/2013/07/esquina-fallo-caso-1.gif" alt="Sublime's custom image"/>
 </p>
 
 ## NAMES 📋
@@ -35,20 +35,25 @@
 * You will be allowed to play again and points will be added automatically in case you play more than one game. 
 
 
-## Minimax algorithm
+## MIN MAX ALGORITHM
 
 Minimax algorithm calculate the minimax decision at a current state and try to find the optimal move for a player, assuming that your opponent also plays optimally.
 It use a backtracking-like method, doing a simple recursive call developping all leaf of the tree, pushing up these values level by level. Minimax explore (DFS Depth First Search) the tree.
 
 Here is a visual exemple of how minimax works
-![minimax](https://github.com/aureliensimon/zer0lose/blob/master/img/ZXEdz.png)
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/28982255/83515724-7975e880-a4f3-11ea-9630-a41f21d9a103.gif" alt="Sublime's custom image"/>
+</p>
 
-## Alpha Beta prunning
+## ALPHA BETA PRUNNING ALGORITHM
 1956, John McCarthy is presiding Dartmouth's conference, in which he presents alpha-beta prunning, that seeks to decrease the number of nodes that are evaluated by the minimax algorithm in its search tree. It stops evaluating a move when at least one possibility has been found that proves the move to be worse than a previously examined move. Such moves need not be evaluated further. When applied to a standard minimax tree, it returns the same move as minimax would, but prunes away branches that cannot possibly influence the final decision.
 
 Visual explanation of alpha-beta prunning
-![abprunning](https://github.com/aureliensimon/zer0lose/blob/master/img/abprunning.png)
+
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Animation_of_alpha-beta_pruning.gif" alt="Sublime's custom image"/>
+</p>
 
 
 ## PROBLEM SOLVER AGENT ⚙️
@@ -62,8 +67,15 @@ Implement the intelligent N in dash (3, 4, 5 in dash) also known as tic-tac-toe 
 ### Initial State:
 A n*n size board that is empty
 
+![STATEINITIAL](https://user-images.githubusercontent.com/74753713/136325399-eaab7f04-1196-405a-a1d7-c83f5a767ae1.png)
+
+
 ### Objective State:
 The same board with a number and positioning of x or circles that define a winner or tie.  
+
+![STATEEND](https://user-images.githubusercontent.com/74753713/136325485-62e1a101-43d5-4fa4-a1ac-ba0a9bd668b6.png)
+
+
 
 ### Test of Objective:
 Can the program make an intelligent decision of where to put its x or circle so that it always wins or draws?
@@ -92,7 +104,7 @@ The program uses several confrotation algorithms such as Min Max, Min max alpha 
 ### NOTES
 Each experiment performed was done in an environment in which the two agents are the computer and the same algorithm. 
 
-#### 1.Number of expanded states, Execution time and Execution result for board 3x3
+### 1. Number of expanded states, Execution time and Execution result for board 3x3
 
 #### :arrow_down_small: Experiments and results:
 
@@ -128,7 +140,10 @@ Each experiment performed was done in an environment in which the two agents are
   
 
 
-#### 2.Number of expanded states, Execution time and Execution result for board 4x4
+### NOTE 
+The evaluation of the agent with only min max was not taken into account due to the excessive delay not only in execution time but also in computer memory resources to make a decision on a board larger than 3 X 3.
+
+### 2. Number of expanded states, Execution time and Execution result for board 4x4
 
 #### :arrow_down_small: Experiments and results:  
   
@@ -151,7 +166,7 @@ Each experiment performed was done in an environment in which the two agents are
   0.10008275833333354 | 0.0970265624999999 | 6501 | 6744 | Draw 
 
 
-#### 3. Number of expanded states, Execution time and Execution result for board 5x5
+### 3. Number of expanded states, Execution time and Execution result for board 5x5
 
 #### :arrow_down_small: Experiments and results:
 
@@ -175,7 +190,7 @@ Each experiment performed was done in an environment in which the two agents are
   0.282937802564102 | 0.31784044444444576 | 9444 | 9672 |  Draw
 
 
-#### 4. 3 x 3 Algorithms Competition
+### 4. Algorithms Competition 3 x 3 
 
 #### :arrow_down_small: Experiments and results:
 
@@ -188,8 +203,10 @@ Each experiment performed was done in an environment in which the two agents are
   Min Max Cutt Off | Min Max |  0.025543020000000017 | 0.98045015 | 468 | 56490 | Draw
   Min Max Cutt Off | Min Max Alpha Beta | 0.03147322000000017 | 0.010567324999999794 | 468 | 921 | Draw
   
+### NOTE 
+The evaluation of the agent with only min max was not taken into account due to the excessive delay not only in execution time but also in computer memory resources to make a decision on a board larger than 3 X 3.
  
-#### 5. 4 x 4 Algorithms Competition
+### 5. Algorithms Competition 4 x 4 
 
 #### :arrow_down_small: Experiments and results:
 
@@ -199,7 +216,7 @@ Each experiment performed was done in an environment in which the two agents are
   Min Max Cutt Off | Min Max Alpha Beta | 0.2380675000000001 | 0.03276520000000064 | 2061 | 1587 | X
   
 
-#### 6. 5 x 5 Algorithms Competition
+### 6.  Algorithms Competition 5 x 5
 
 #### :arrow_down_small: Experiments and results:
 
@@ -209,7 +226,7 @@ Each experiment performed was done in an environment in which the two agents are
   Min Max Cutt Off | Min Max Alpha Beta | 0.32351358461538465  | 0.05862593333333329 | 3394 | 9002 | Draw
   
 
-#### 7. Time Comparation Table
+### 7. Time Comparation Table
 #### :arrow_down_small: Experiments and results:
 
 
@@ -217,13 +234,13 @@ Each experiment performed was done in an environment in which the two agents are
 
 
 
-#### 8. Time Comparation Graphic 
+### 8. Time Comparation Graphic 
 #### :arrow_down_small: Experiments and results:
 
 ![image](https://user-images.githubusercontent.com/74753713/136321861-1f5a9362-5509-4e02-9dbf-79e8b8f32b36.png)
 
 
-#### 9. Nodes Expanded Comparation Table
+### 9. Nodes Expanded Comparation Table
 #### :arrow_down_small: Experiments and results:
 
 
@@ -232,7 +249,7 @@ Each experiment performed was done in an environment in which the two agents are
 
 
 
-#### 10. Nodes Expanded Comparation Graphic 
+### 10. Nodes Expanded Comparation Graphic 
 #### :arrow_down_small: Experiments and results:
 
 ![image](https://user-images.githubusercontent.com/74753713/136322074-6d132932-1b28-4e42-a7fe-9295003a3327.png)
@@ -242,6 +259,8 @@ Each experiment performed was done in an environment in which the two agents are
 
 
 ## CONCLUSION
+*
+
 
 
 ## BIBLIOGRAPHY
