@@ -284,5 +284,6 @@ The evaluation of the agent with only min max was not taken into account due to 
 * Class slides
 * https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-5-zobrist-hashing/
 * https://github.com/SliMM
+* https://github.com/lukejriddle
 
 
